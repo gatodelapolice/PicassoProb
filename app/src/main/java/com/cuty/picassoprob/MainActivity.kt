@@ -10,6 +10,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
+    var imageDirection : String = ""
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -20,8 +21,9 @@ class MainActivity : AppCompatActivity() {
 
     }
     fun magicBu(view:View){
+        imageDirection="https://i.imgur.com/H981AN7.jpg"
         try{Picasso.with(this)
-                .load("https://i.imgur.com/H981AN7.jpg")
+                .load(imageDirection)
                 .into(iVMentalist)}
         catch (ex:Exception){
             Toast.makeText(this,"no hay conexion a internet",Toast.LENGTH_SHORT).show()
